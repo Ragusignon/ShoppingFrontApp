@@ -1,0 +1,13 @@
+<div *ngIf="selectedProduct" (click)="updateEditStatus()">
+    <h2>{{selectedProduct.product_name}} Details</h2>
+    <label><span>id: </span>{{selectedProduct.product_detail_id}}</label>
+    <div>
+        <label for="product-name">Product name: </label><br>
+        <input id="product-name" [(ngModel)]="selectedProduct.product_name" placeholder="name"><br>
+        <label> <span>Product Description : </span>{{selectedProduct.product_descriptions}}</label><br>
+        <label> <span>Unit Price : </span>{{selectedProduct.unit_price}}</label><br>
+        <label> <span>Brand Name : </span>{{selectedProduct.brand_name}}</label><br>
+        <label> <span>Category id : </span>{{selectedProduct.category_id}}</label><br>
+        <label> <span>Created Timestamp : </span>{{selectedProduct.created_timestamp}}</label>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<h3>Product List</h3>
+<ul class="products"> 
+    <li *ngFor= "let product of product_list" [class.selected]="product === selectedProduct" (click) ="onSelect(product)" (mouseenter)="onMouseenter(product)">
+        <span class="badge">{{product.product_detail_id}}</span> {{product.product_name}}
+    </li>
+</ul>
+<div>{{editStatus}}</div>
+<app-product-detail [selectedProduct] ="selectedProduct" (edittedStatus)="edittedStatus($event)"></app-product-detail>
